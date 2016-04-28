@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Text Interpolation</title>
+    <meta name="author" content="Kevin Peters">
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <!--Never do this user-provided content because this can lean to XSS attacks.-->
+    <div id="app">
+        <p>
+            {{ number + 1 }}
+        </p>
+        <p>
+            {{ ok ? 'YES' : 'NO' }}
+        </p>
+        <p>
+            {{ message.split('').reverse().join('') }}
+        </p>
+
+        <!--Not working examples-->
+        <p>
+            <b>Not working:</b>
+        </p>
+        <p>
+            <!-- this is a statement, not an expression: -->
+            {{ var a = 1 }}
+        </p>
+        <p>
+            <!-- flow control won't work either, use ternary expressions -->
+            {{ if (ok) { return message } }}
+        </p>
+    </div>
+    <script type="text/javascript" src="../../vue.js"></script>
+    <script type="text/javascript" src="javascript-expressions.js"></script>
+</body>
+
+</html>
