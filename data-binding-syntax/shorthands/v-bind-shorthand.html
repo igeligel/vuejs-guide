@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>v-bind Shorthand</title>
+    <meta name="author" content="Kevin Peters">
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div id="app">
+        <!-- full syntax -->
+        <a v-bind:href="url" target="_blank">Click me First</a>
+
+        <!-- shorthand -->
+        <a :href="url" target="_blank">Click me Second</a>
+
+        <!--or-->
+
+        <!-- full syntax -->
+        <button v-bind:disabled="buttonsDisabled">First Button</button>
+
+        <!-- shorthand -->
+        <button :disabled="buttonsDisabled">Second Button</button>
+    </div>
+    <script type="text/javascript" src="../../vue.js"></script>
+    <script type="text/javascript" src="v-bind-shorthand.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Arguments</title>
+    <meta name="author" content="Kevin Peters">
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div id="app">
+        <a v-bind:href="url">Click me</a>
+        <!--You could use this too:-->
+        <!--<a href="{{url}}">Click me</a>-->
+        <!--But internally it will convert to v-bind also.-->
+
+        <!--Listener for DOM events:-->
+        <!--<a v-on:click="doSomething">Click me for event</a>-->
+        <!--Will be handled later-->
+    </div>
+    <script type="text/javascript" src="../../vue.js"></script>
+</body>
+
+</html>
