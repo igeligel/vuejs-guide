@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Object Syntax</title>
+    <meta name="author" content="Kevin Peters">
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div id="example">
+        <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">Styled Text</div>
+
+        <!--Direct Style Object-->
+        <div v-bind:style="styleObject">Second styled Text</div>
+
+    </div>
+
+    <script type="text/javascript" src="../../vue.js"></script>
+    <script type="text/javascript" src="object-syntax.js"></script>
+</body>
+
+</html>
