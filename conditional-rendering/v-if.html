@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>v-if</title>
+    <meta name="author" content="Kevin Peters">
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div id="app">
+        <!-- Handlebars template -->
+        {{#if ok}}
+          <h1>First Yes</h1>
+        {{/if}}
+
+        <!--Use this if you do not toggle that often!-->
+
+        <!--v-if directive-->
+        <h1 v-if="ok">Second Yes</h1>
+
+
+        <!--With else block-->
+        <h1 v-if="ok">Third Yes</h1>
+        <h1 v-else>Third No</h1>
+    </div>
+
+    <script type="text/javascript" src="../vue.js"></script>
+    <script type="text/javascript" src="v-if.js"></script>
+</body>
+
+</html>
