@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Caveats</title>
+    <meta name="author" content="Kevin Peters">
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <h1>Following changes cannot be detected by Vue.js:</h1>
+  <ul>
+    <li>When you directly set an item with the index, e.g.: caveatsModel.items[0] = {}</li>
+    <li>When you modify the length of the Array, e.g.: caveatsModel.items.length = 0</li>
+  </ul>
+
+  <p>
+    You should try this instead: </br>
+    // same as `caveatsModel.items[0] = ...` but triggers view update </br>
+    caveatsModel.items.$set(0, { message: 'Changed!'})
+  </p>
+
+  <p>
+    You can also use the remove() function </br>
+    caveatsModel.items.$remove({ message: 'foo' }) </br>
+    This needs to be the same object instance.
+  </p>
+
+  <h1>App</h1>
+    <div id="app">
+      <template v-for="item in items">
+          <li>{{ item.message }}</li>
+      </template>
+    </div>
+
+
+    <script type="text/javascript" src="../../vue.js"></script>
+    <script type="text/javascript" src="caveats.js"></script>
+</body>
+
+</html>

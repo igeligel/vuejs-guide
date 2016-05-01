@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>v-for index</title>
+    <meta name="author" content="Kevin Peters">
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <ul id="example-2">
+        <li v-for="item in items">
+            {{ parentMessage }} - {{ $index }} - {{ item.message }}
+        </li>
+
+        <p>Alternative</p>
+        <div v-for="(index, item) in items">
+            {{ index }} {{ item.message }}
+        </div>
+
+        <p>Also working with divs:</p>
+        <div v-for="item of items">
+            {{ parentMessage }} - {{ $index }} - {{ item.message }}
+        </div>
+    </ul>
+
+    <script type="text/javascript" src="../../vue.js"></script>
+    <script type="text/javascript" src="indexing.js"></script>
+</body>
+
+</html>
