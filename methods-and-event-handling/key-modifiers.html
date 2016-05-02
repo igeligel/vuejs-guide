@@ -1,0 +1,109 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Key Modifiers</title>
+    <meta name="author" content="Kevin Peters">
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div id="app">
+        <p>
+            Press Enter
+        </p>
+        <!-- only call vm.submit() when the keyCode is 13 -->
+        <input v-on:keyup.13="submit"></input>
+
+        <br/>
+        <br/>
+        <p>
+            Press Enter, KeyUp Event
+        </p>
+        <!-- same as above -->
+        <input v-on:keyup.enter="submit"></input>
+
+        <br/>
+        <br/>
+        <p>
+            Shorthand for Enter
+        </p>
+        <!-- also works for shorthand -->
+        <input @keyup.enter="submit"></input>
+
+        <br/>
+        <br/>
+        <p>
+            Shorthand for tab
+        </p>
+        <!-- also works for shorthand -->
+        <input @keyup.tab="submit"></input>
+
+        <br/>
+        <br/>
+        <p>
+            Shorthand for delete
+        </p>
+        <!-- also works for shorthand -->
+        <input @keyup.delete="submit"></input>
+
+        <br/>
+        <br/>
+        <p>
+            Shorthand for esc
+        </p>
+        <!-- also works for shorthand -->
+        <input @keyup.esc="submit"></input>
+
+        <br/>
+        <br/>
+        <p>
+            Shorthand for space
+        </p>
+        <!-- also works for shorthand -->
+        <input @keyup.space="submit"></input>
+
+        <br/>
+        <br/>
+        <p>
+            Shorthand for up
+        </p>
+        <!-- also works for shorthand -->
+        <input @keyup.up="submit"></input>
+
+        <br/>
+        <br/>
+        <p>
+            Shorthand for down
+        </p>
+        <!-- also works for shorthand -->
+        <input @keyup.down="submit"></input>
+
+        <br/>
+        <br/>
+        <p>
+            Shorthand for left
+        </p>
+        <!-- also works for shorthand -->
+        <input @keyup.left="submit"></input>
+
+        <br/>
+        <br/>
+        <p>
+            Shorthand for right
+        </p>
+        <!-- also works for shorthand -->
+        <input @keyup.right="submit"></input>
+
+    </div>
+
+    <script type="text/javascript" src="../vue.js"></script>
+    <script type="text/javascript" src="key-modifiers.js"></script>
+</body>
+
+</html>

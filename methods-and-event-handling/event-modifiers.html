@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Event Modifiers</title>
+    <meta name="author" content="Kevin Peters">
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div id="app">
+        <!-- the click event's propagation will be stopped -->
+        <a v-on:click.stop="doThis">Do This</a>
+
+        <!-- the submit event will no longer reload the page -->
+        <form v-on:submit.prevent="onSubmit">On Submit</form>
+
+        <!-- modifiers can be chained -->
+        <a v-on:click.stop.prevent="doThat">Do That</a>
+
+        <!-- just the modifier -->
+        <form v-on:submit.prevent>Prevent submit</form>
+
+        <!-- use capture mode when adding the event listener -->
+        <div v-on:click.capture="doThis">Do this</div>
+
+        <!-- only trigger handler if event.target is the element itself -->
+        <!-- i.e. not from a child element -->
+        <div v-on:click.self="doThat">Do that</div>
+    </div>
+
+    <script type="text/javascript" src="../vue.js"></script>
+    <script type="text/javascript" src="event-modifiers.js"></script>
+</body>
+
+</html>
