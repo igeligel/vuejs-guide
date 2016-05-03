@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Index</title>
+    <meta name="author" content="Kevin Peters">
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div id="app">
+        <!-- `picked` is a string "a" when checked -->
+        <input type="radio" v-model="picked" value="a">
+        <span>Picked: {{ picked }}</span>
+        <br/>
+
+        <!-- `toggle` is either true or false -->
+        <input type="checkbox" v-model="toggle">
+        <span>Toggle: {{ toggle }}</span>
+        <br/>
+
+        <!-- `selected` is a string "abc" when selected -->
+        <select v-model="selected">
+            <option value="abc">ABC</option>
+        </select>
+        <span>Selected: {{ selected }}</span>
+        <br/>
+    </div>
+    <script type="text/javascript" src="../../vue.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
