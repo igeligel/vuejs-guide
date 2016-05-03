@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Debounce</title>
+    <meta name="author" content="Kevin Peters">
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div id="app-debounce">
+        <p>
+            Just wait two seconds for the debounce. This is useful for ajax autocomplete requests.
+        </p>
+        <input v-model="msg" debounce="2000">
+        <span>{{msg}}</span>
+    </div>
+    <script type="text/javascript" src="../../vue.js"></script>
+    <script type="text/javascript" src="debounce.js"></script>
+</body>
+
+</html>
