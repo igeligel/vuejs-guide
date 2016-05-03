@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Radio</title>
+    <meta name="author" content="Kevin Peters">
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div id="app-select">
+        <select v-model="selected">
+            <option selected>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+        <span>Selected: {{ selected }}</span>
+    </div>
+    <br/>
+    <p>
+        Multiple Select. Select with CTRL.
+    </p>
+    <div id="app-multiple-select">
+        <select v-model="selected" multiple>
+            <option selected>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+        <br>
+        <span>Selected: {{ selected | json }}</span>
+    </div>
+
+    <br/>
+    <p>
+        Dynamic options rendered with v-for.
+    </p>
+    <div id="app-select-rendered-with-vfor">
+        <select v-model="selected">
+            <option v-for="option in options" v-bind:value="option.value">
+                {{ option.text }}
+            </option>
+        </select>
+        <span>Selected: {{ selected }}</span>
+    </div>
+
+    <script type="text/javascript" src="../../vue.js"></script>
+    <script type="text/javascript" src="select.js"></script>
+</body>
+
+</html>
